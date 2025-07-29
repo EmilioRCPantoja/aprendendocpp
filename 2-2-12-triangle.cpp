@@ -5,106 +5,71 @@ using namespace std;
 
 int main()
 {
-    int i, j, out = 0, high;
+    int i, j, k, l, high, in = 1, out = 1, star = 3, beg = 15 ;
 
     cin >> high;
 
-    for(i=0; i <= high ; i++)
+    for(i=0; i < star; i++)
     {
-
-        out = high/2;
-        if(i == 0)
+        for(j=0; j<beg; j++)
         {
-            for(j = 0; j < high/2; j++)
-            {
-                cout << " ";
-            }
-
-            cout << "*";
-
-            for(j = 0; j < high*2-1; j++)
-            {
-                cout << " ";
-            }
-
-            cout << "*";
-
-            for (j = 0; j < high * 2 - 1; j++ )
-            {
-                cout << " "; 
-            }
-            cout << "*"<<endl;
+            cout << " ";
         }
-        else if(i>0 && i < high)
+        cout << "*";
+    }
+    
+    cout << endl;
+
+    beg-=2;
+
+    for(i=1; i < high - 1; i++)
+    {
+        for(j = 0; j < out; j++)
         {
-            for(j = 0; j < out; j++)
-            {
-                cout << " ";
-            }
-            
-            cout << "*";
-            
-            for(j = 0; j < i+1; j++)
-            {
-                cout << " ";
-            }
-
-            cout << "*";
-            
-            for(j = 0; j < out * 2 - 1; j++)
-            {
-                cout << " ";
-            }
-
-            cout << "*";
-            
-            for(j = 0; j < i+1; j++)
-            {
-                cout << " ";
-            }
-
-            cout << "*";
-
-            for(j = 0; j < out * 2 - 1; j++)
-            {
-                cout << " ";
-            }
-
-            cout << "*";
-            
-            for(j = 0; j < i+1; j++)
-            {
-                cout << " ";
-            }
-
-            cout << "*"<< endl;
-
+            cout << " ";
         }
-        else
-        {
-           for(j = 0; j < high*2; j++)
-           {
-            cout<<"*";
-           } 
-
-           cout << " ";
-
-           for(j = 0; j < high*2; j++)
-           {
-            cout<<"*";
-           } 
-
-           cout << " ";
-
-           for(j = 0; j < high*2; j++)
-           {
-            cout<<"*"<<endl;
-           } 
-           
-        }
-
-       
+    
         
+        for(j = 0; j < star; j++)
+        {
+            for(k = 0; k < beg; k++)
+            {
+                cout<< " ";
+            }
+
+            cout << "*";
+
+            for(l = 0; l < in; l++)
+            {
+                cout << " ";
+            }
+
+            cout << "*";
+            
+        }
+        cout << endl;
+        beg -=2;
+        out +=1;
+        in +=2;
     }
 
+    for(i = 0; i < out; i++)
+    {
+        cout << " ";
+    }
+    for(i = 0; i < star; i++)
+    {
+        for(k = 0; k < beg; k++)
+        {
+            cout << " ";
+        }
+        for(j = 0; j < in + 2; j++)
+        {
+            cout << "*";
+        }
+
+    }
+
+    cout << endl; 
+        
 }
